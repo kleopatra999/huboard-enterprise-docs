@@ -1,19 +1,100 @@
 body {
-  background-color: $light-gray;
-  color: $medium-gray;
+  @include background(#efefef);
+  color: #777777;
 }
 
-.delete-me {
-  @include align-items(center);
-  @include display(flex);
-  @include justify-content(center);
-  height: 100vh;
+.bodycontent {
+  height: 80vh;
+  background-color: #efefef;
+  text-align: left;
 
-  .container {
-    text-align: center;
 
-    h1 {
+.container {
+  background-color: #efefef;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 945px;
+  text-align: left;
+
+h1 {
       font-weight: 200;
     }
   }
+}
+
+header {
+  @include background(#391b65);
+  height: 60px;
+  width: 100%;
+  margin: 0px;
+  padding: 18px;
+}
+
+.headerlogo {
+  @include span-columns(5);
+  position: relative;
+  left: 23%;
+}
+
+.headercontent {
+  @include span-columns(7);
+  @include word-wrap;
+  color: #ffffff;
+  position: absolute; 
+  top: 0px;
+  right: 10%;
+  height: 60px;
+  width: 35%;
+  padding: 18px;
+	}
+a, {
+  color: #ffffff;
+  hover: #00ff00;
+}
+footer {
+  background-color: #eeeeee;
+  @include border-style(solid null null);
+  @include border-width(1px null null);
+  @include border-color(#bbbbbb null null);
+  height: 90px;
+  width: 100%;
+  margin: 0px;
+  padding: 18px;
+}
+
+.footercontent {
+  @include span-columns(4);
+  background-color: #301b65;
+  color: #ffffff;
+  position: absolute;
+  right: 15%;
+  top: 0px;
+  height: 60px;
+  padding: 18px;
+        }
+
+form {
+  width:500px;
+  margin:50px auto;
+  verticle-align: top;
+}
+
+.search {
+  padding:8px 15px;
+  background:rgba(50, 50, 50, 0.2);
+  border:0px solid #dbdbdb;
+}
+
+.button {
+  position: absolute;
+  padding: 6px 15px;
+  border: 2px solid #207cca;
+  background-color: #207cca;
+  color: #fafafa;
+}
+
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
 }

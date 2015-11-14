@@ -2,10 +2,17 @@
 layout: default
 ---
 
-.delete-me
-  .container
-    %h1 Proteus
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-jekyll">Let's get started</a>
-      building your prototype.
+.bodycontent
+	.container
+		%form
+			%input{:placeholder => "How can we help?", :required => "", :type => "text"}/
+			%input{:type => "button", :value => "Search"}/
+		%ul#catagories
+			%li
+			%a{:href => "pages/about.html"} Activity dashboard
+			%li
+			%a{:href => "pages/comand-line utilities.html"} Command-line utilities
+			%li
+			%a{:href => "pages/site admin dashboard.html"} Site admin dashboard
+			%li
+			%a{:href => "rebuilding contributions.html"} Rebuilding contributions data

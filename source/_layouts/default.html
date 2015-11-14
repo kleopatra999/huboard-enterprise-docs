@@ -2,6 +2,8 @@
 # Layouts must stay in HTML
 ---
 <!DOCTYPE html>
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -13,7 +15,9 @@
     <link rel="stylesheet" href="{% asset_path application.css %}">
   </head>
   <body>
-    {{ content }}
+	{% include header.html %}
+	{{ content }}
+	{% include footer.html %}
     <script type="text/javascript" src="{% asset_path application.js %}"></script>
   </body>
 </html>
