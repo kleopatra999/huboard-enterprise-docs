@@ -2,6 +2,8 @@
 
 @import "bourbon";
 @import "neat";
-@import "base/base";
+// Took base/base out as it was constantly conflicting with my sass in _gloabal.scss
+// base/base contains built in sass files for several functions ie forms.scss, buttons.scss etc.
+//@import "base/base";
 
 @import "global";
