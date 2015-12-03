@@ -15,4 +15,6 @@ description: Documentation Portal for Huboard Enterprise
 markdown: kramdown
 
 # Include Pages Directory
-include: [pages, images]
+include: [pages, images, hb-articles]
+
+# Indicates Collections (Where Document Articles are)

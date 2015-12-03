@@ -2,8 +2,6 @@
 # Layouts must stay in HTML
 ---
 <!DOCTYPE html>
-
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,16 +14,20 @@
   </head>
   <body>
   <!-- There has got to be a better way for me to implement this. -->
-      {% include header.html %}
-          <div class='body-container'>
-            <div class='hb-form'>
-              <form>
-                <input class='search'  placeholder='How can we help?' required=' type='text'>
-                <input class='searchbutton' type='button' value='Search'>
-              </form>
-            </div>
-          {{ content }}
+    {% include header.html %}
+      <div class='article-container'>
+        <div class='hb-breadcrumb'> Breadcrumb > Breadcrumbs > Breadcrumbs
         </div>
-      {% include footer.html %}
+        <div class="article-search">
+          <form>
+            <input placeholder='How can we help?' required=' type='text'>
+            <input type='button' value='Search'>
+          </form>
+        </div>
+      </div>
+      <div class='body-container'>
+      {{ content }}
+    </div>
+    {% include footer.html %}
   </body>
 </html>
