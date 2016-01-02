@@ -1,26 +1,50 @@
 body {
   @include background(#ffffff);
   height: 100%;
-  color: #777777;
+  color: #5d5d5D;
+  a:link, a:visited {
+    color: #4183c4;
+    text-decoration: none;
+  }
 }
 
-.body-container {
+.hb-body-container {
   margin-left: auto;
   margin-right: auto;
   width: 945px;
-  height: 80vh;
+  min-height: 80vh;
+
+  h4 {
+    @include border-style(null null solid);
+    @include directional-property(border, width, null null 1px null);
+    @include padding(null null 5px null);
+  }
 }
 
-.article-container {
-  @include border-style(null null solid);
-  @include directional-property(border, width, null null 1px null);
-  margin-left: auto;
-  margin-right: auto;
-  width: 945px;
-  height: 70px;
+.hb-catagories  {
+  background-color: #ffffff;
 }
 
-.header-container {
+.hb-article-links {
+  padding: 0px;
+  margin: 0px;
+
+  ul {
+  }
+
+  li {
+    padding: 0px;
+    margin-top: 2px;
+    list-style: none;
+  }
+    
+  a:link, a:visited {
+    color: #4183c4;
+    text-decoration: none;
+  }
+}
+
+.hb-header-container {
   background-color: #391b65;
   margin-left: auto;
   margin-right: auto;
@@ -35,11 +59,11 @@ header {
   padding: 18px;
 }
 
-.header-logo {
+.hb-header-logo {
   float: left;
 }
 
-.header-content {
+.hb-header-content {
   float: right;
   padding: 3px;
   
@@ -58,7 +82,7 @@ footer {
     height: 90px;
     width: 100%;
 
-  .container {
+  .hb-container {
     margin-left: auto;
     margin-right: auto;
     color: #898989;
@@ -76,26 +100,19 @@ footer {
     overflow: hidden;
     margin-right: 10px;
     list-style-type: none;
-    display: inline;
+    @include display(flex);
+    
+    li {
+      padding: 3px;
+    }
   }
 
   .hu {
     opacity: .50;
-    margin: 10px;
+    margin: 20px;
     position: absolute;
     left: 50%;
   }
-}
-.hb-breadcrumb {
-  float: left;
-  padding: 50px;
-}
-
-.article-search {
-  float: right;
-  margin-left: 100px;
-  margin-right: 10px;
-  padding: 50px;
 }
 
 .hb-form {
@@ -112,29 +129,4 @@ footer {
 .search-button {
   padding: 3px 10px;
   color: black;
-}
-
-.hb-catagories  {
-  background-color: #ffffff;
-}
-
-.hb-titles {
-  ul {
-    padding: 0;
-  }
-  li {
-    background-color: white;
-    padding: 0px;
-    margin-left: -20px;
-  }
-  a:link, a:visited {
-    color: #4183c4;
-    text-decoration: none;
-  }
-}
-
-h4 {
-  @include border-style(null null solid);
-  @include directional-property(border, width, null null 1px null);
-  @include padding(null null 5px null);
 }

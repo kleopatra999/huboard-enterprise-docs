@@ -13,20 +13,20 @@
     <link rel="stylesheet" href="{% asset_path application.css %}">
   </head>
   <body>
-  <!-- There has got to be a better way for me to implement this. -->
     {% include header.html %}
-      <div class='article-container'>
-        <div class='hb-breadcrumb'> Breadcrumb > Breadcrumbs > Breadcrumbs
-        </div>
-        <div class="article-search">
+      <div class='hb-breadcrumb-container'>
+    {% include hb-breadcrumbs.html %}
+        <div class="hb-article-search">
           <form>
             <input placeholder='How can we help?' required=' type='text'>
             <input type='button' value='Search'>
           </form>
         </div>
       </div>
-      <div class='body-container'>
+      <div class='hb-body-container'>
+        <div class='hb-article-content'>
       {{ content }}
+        </div>
     </div>
     {% include footer.html %}
   </body>

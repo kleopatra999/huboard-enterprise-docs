@@ -1,4 +1,8 @@
-gems: [bourbon, neat]
+gems: 
+  - bourbon
+  - neat
+  - jekyll-html-pipeline
+  - extended-markdown-filter
 
 # Structure configuration
 source: source
@@ -12,7 +16,13 @@ title: Huboard Enterprise
 description: Documentation Portal for Huboard Enterprise
 
 # Build settings
-markdown: kramdown
+markdown: HTMLPipeline
+
+html_pipeline:
+  filters:
+    - "ExtendedMarkdownFilter"
+  context:
+    emf_use_blocks: true
 
 # Include Pages Directory
 include: [pages, images, hb-articles]
