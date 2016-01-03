@@ -1,4 +1,3 @@
-
 .hb-breadcrumb-container {
   @include border-style(null null solid);
   @include directional-property(border, width, null null 1px null);
@@ -12,17 +11,26 @@
 .hb-breadcrumb {
   float: left;
   padding-top: 30px;
+  color: #999;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 11px 0;
+  white-space: nowrap;
 }
 
 .hb-article-search {
   float: right;
-  margin-left: 100px;
-  margin-right: 10px;
-  padding-top: 30px;
+  padding-top: 38px;
 }
 
 .hb-article-content {
   width: 80%;
+  h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px 0;
+    color: #333;
+  }
   ol {
     counter-reset: li;
     list-style: none;
@@ -34,8 +42,11 @@
       position: relative;
       margin-bottom: 5px;
 
+      p {
+        color: #333;
+      }
+
       img {
-        z-index: 4;
         max-width: 100px;
         opacity: .5;
         float: right;
@@ -45,7 +56,7 @@
         &:hover {
           z-index: 100;
           opacity: 1;
-          position: relative;
+          position: absolute;
           right: 0px;
           max-width: 70%;
           border: 1px solid #000000;

@@ -2,6 +2,7 @@ body {
   @include background(#ffffff);
   height: 100%;
   color: #5d5d5D;
+  font: 15px/1.4 helvetica,arial,freesans,clean,sans-serif;
   a:link, a:visited {
     color: #4183c4;
     text-decoration: none;
@@ -15,9 +16,15 @@ body {
   min-height: 80vh;
 
   h4 {
-    @include border-style(null null solid);
-    @include directional-property(border, width, null null 1px null);
-    @include padding(null null 5px null);
+    color: #666;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 5px;
+    margin: 15px 0 10px;
+    font-weight: 700;
+    font-size: 15px;
+    a:visited {
+        color: #666;
+      }
   }
 }
 
@@ -26,6 +33,7 @@ body {
 }
 
 .hb-article-links {
+  vertical-align: baseline;
   padding: 0px;
   margin: 0px;
 
@@ -34,13 +42,21 @@ body {
 
   li {
     padding: 0px;
-    margin-top: 2px;
+    margin-bottom: 5px;
     list-style: none;
   }
     
   a:link, a:visited {
     color: #4183c4;
     text-decoration: none;
+    background: url(/images/li-chevron.png) 0 5px no-repeat;
+    padding-left: 10px;
+    font: 400 15px/1.3 helvetica,arial,freesans,clean,sans-serif; 
+    display: block;
+  }
+
+  a:hover {
+    background-position: 2px 5px;
   }
 }
 
@@ -65,7 +81,7 @@ header {
 
 .hb-header-content {
   float: right;
-  padding: 3px;
+  padding: 0px;
   
   a:link, a:visited {
     color: #ffffff;
@@ -116,7 +132,7 @@ footer {
 }
 
 .hb-form {
-  margin:60px;
+  margin-top: 40px;
   margin-left: 150px;
   margin-right: 150px;
 }

@@ -6,7 +6,9 @@ title: bob
 ## bob
 
   1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel semper sem, sed euismod nisi. Ut dui lacus, posuere sed turpis non, ultricies euismod ex. Nunc dictum purus interdum dolor dictum, sed commodo massa vulputate. Aliquam non lacus nulla. Vestibulum sed massa et risus egestas lacinia. Donec ac accumsan urna. Donec et mauris mattis, placerat lorem id, sodales lorem.
-  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel semper sem, sed euismod nisi. Ut dui lacus, posuere sed turpis non, ultricies euismod ex. Nunc dictum purus interdum dolor dictum, sed commodo massa vulputate. Aliquam non lacus nulla. Vestibulum sed massa et risus egestas lacinia. Donec ac accumsan urna. Donec et mauris mattis, placerat lorem id, sodales lorem. 
+
+  2. In gravida sem eget congue scelerisque. Nullam sed pharetra eros. Etiam venenatis orci non velit eleifend dignissim ut sit amet orci. Fusce nisl odio, dapibus et mi non, fermentum cursus mi. Nulla in tellus consectetur, interdum enim vel, maximus elit. Aliquam id vulputate urna, sit amet fermentum ipsum. Sed eu leo non lacus euismod interdum interdum sit amet quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed libero purus, lacinia cursus nisi vel, sodales
+  sagittis elit. Nullam ullamcorper purus semper nunc maximus, vel consequat ex porta.
 
   {{#tip}}
 
@@ -18,7 +20,7 @@ title: bob
 
 {{#tip}}
 
-Here's a tip. 
+Tips are generated with `{{#tip}} Blah Blah {{/tip}}` 
 
 {{/tip}}
 
