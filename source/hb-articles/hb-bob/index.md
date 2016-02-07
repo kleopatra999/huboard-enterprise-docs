@@ -25,4 +25,12 @@ Tips are generated with `{{#tip}} Blah Blah {{/tip}}`
 {{/tip}}
 
   1. Mauris sit amet enim dignissim, consequat nunc mattis, facilisis felis. Vivamus eget maximus erat. Donec dignissim, urna vel sollicitudin iaculis, mauris erat laoreet magna, sed finibus odio risus fermentum libero. Donec viverra semper ante, vel venenatis arcu commodo vel.
-  2. Images should be on the right of the text![400x600](http://placehold.it/400x600)
+  2. Images should be on the right of the text![placeholdit](http://placehold.it/600x200)
+
+Table:
+
+| Column 1 | Column 2 | Column 3  |
+| -------- | :------: | :-------: |
+|          |          |           |
+| One      | Two      | Three     |
+
