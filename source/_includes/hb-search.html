@@ -1,6 +1,16 @@
 <div class="hb-article-search">
-<form>
-  <input placeholder='How can we help?' required=' type='text'>
-  <input type='button' value='Search'>
-</form>
+  <form>
+    <div id="search">
+      <form action="/search" method="get">
+        <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">
+        <input class='searchbutton' type='submit' value='Search' formaction="/search" >
+      </form>
+    </div>
+  </form>
+  <section id="search-results" style="display: none;">
+    <p>Search results</p>
+    <div class="entries">
+    </div>
+  </section>
 </div>
+
