@@ -1,3 +1,4 @@
+/* DIV which holds breadcrumbs and search in articles only. */
 .hb-breadcrumb-container {
   @include border-style(null null solid);
   @include directional-property(border, width, null null 1px null);
@@ -6,7 +7,6 @@
   width: 945px;
   height: 70px;
 }
-
 
 .hb-breadcrumb {
   float: left;
@@ -22,15 +22,55 @@
   float: right;
   padding-top: 38px;
 }
-
+/* DIV that holds article content */
 .hb-article-content {
   width: 80%;
+/* Page / Article Title */
   h2 {
     font-size: 30px;
     font-weight: 300;
     margin: 10px 0;
     color: #333;
   }
+  
+/* Creates the side note/alert. */
+  h3 {
+    position: relative;
+    float: left;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #264c72;
+    border: 1px solid #97c1da;
+    border-radius: 3px;
+    background-color: #d8ebf8;
+    background: -moz-linear-gradient(#d8ebf8,#d0e3ef);
+    background: -webkit-linear-gradient(#d8ebf8,#d0e3ef);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ebf8', endColorstr='#d0e3ef')";
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  }
+/* CSS Image enlarge on click */
+  img {
+    z-index: 100;
+    max-width: 100px;
+    opacity: .8;
+    border: 1px solid #efefef;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    margin-top: 5px;
+    &:active {
+      opacity: 1;
+      z-index:101;
+      position: absolute;
+      top: -50%;
+      max-width: 75%;
+      border: 1px solid #000000;
+    }
+  }
+/* CSS of Lists that create the custom neat counter. */
   ol {
     counter-reset: li;
     list-style: none;
@@ -40,28 +80,13 @@
     li {
       padding: 5px 0 5px 55px;
       position: relative;
+      width: 800px;
       margin-bottom: 5px;
 
       p {
         color: #333;
-      }
-
-      img {
-        z-index: 100;
-        max-width: 100px;
-        opacity: .8;
-        border: 1px solid #efefef;
-        float: right;
-        cursor: pointer;
-        &:hover {
-          z-index: 200;
-          position: absolute;
-          right: 0px;
-          top: 0px;
-          opacity: 1;
-          max-width: 75%;
-          border: 1px solid #000000;
-        }
+        margin-bottom: 45px;
+        width: 650px;
       }
     }
     li::before {
@@ -92,6 +117,7 @@
   }
 }
 
+/* For the extended-markdown-filter {{#tip}} function. */
 .alert.tip {
   position: relative;
   margin: 0 auto;
@@ -106,15 +132,4 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ebf8', endColorstr='#d0e3ef')";
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
   text-shadow: 0 1px 0 rgba(255,255,255,.8);
-
-  img {
-  }
-}
-
-.hb-reference {
-  min-height: 125px;
-  h2 {
-    color: #63598e;
-    border-bottom: 1px solid #5d5d5d;
-  }
 }

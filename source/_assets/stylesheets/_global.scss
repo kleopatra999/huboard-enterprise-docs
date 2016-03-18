@@ -8,13 +8,13 @@ body {
     text-decoration: none;
   }
 }
-
+/* DIV that centers and contains all page / article content. */
 .hb-body-container {
   margin-left: auto;
   margin-right: auto;
   width: 945px;
   min-height: 80vh;
-
+/* h4 for category titles on index page. */
   h4 {
     color: #666;
     border-bottom: 1px solid #DDD;
@@ -27,7 +27,7 @@ body {
       }
   }
 }
-
+/* DIV that contains article categories. */
 .hb-catagories  {
   background-color: #ffffff;
 }
@@ -68,7 +68,7 @@ body {
 }    
 
 header {
-  background-color: #391b65;
+  background-color: #392165;
   height: 60px;
   width: 100%;
   margin: 0px;
