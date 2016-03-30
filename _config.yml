@@ -3,6 +3,7 @@ gems:
   - neat
   - jekyll-html-pipeline
   - extended-markdown-filter
+  - jekyll-lunr-js-search
 
 # Structure configuration
 source: source
