@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentation Portal for Huboard Enterprise">
+    <title>Huboard Enterprise</title>
+    <link rel="canonical" href="/search/">
+    <link rel="stylesheet" href="/assets/application-d46aeca7cba837b10a2a2ffcc9439e31.css">
+  </head>
+  <body>
+  <!-- There has got to be a better way for me to implement this. -->
+      <header>
+  <div class="hb-header-container">
+    <div class="hb-header-logo">
+      <img src="/images/huboard-enterprise-logo.png"/>
+	  </div>
+	  <div class="hb-header-content">
+      <a href="">Versions</a>
+	    <a href="">Support</a>
+	    <a href="">Return to HuBoard Enterprise</a>
+	  </div>
+  </div>
+</header>
+
+          <div class='hb-body-container'>
+            <div class="hb-form">
+              <form>
+                <div id="search">
+                  <form action="/search" method="get">
+                    <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">
+                    <input class='searchbutton' type='submit' value='Search' formaction="/search" >
+                  </form>
+                </div>
+              </form>
+              <section id="search-results" style="display: none;">
+                <p>Search results</p>
+                <div class="entries">
+                </div>
+              </section>
+            </div>
+          
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <article>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+    </article>
+  {{/entries}}
+</script>
+
+<script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#search-query').lunrSearch({
+      indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+      results : '#search-results',  // selector for containing search results element
+      entries : '.entries',         // selector for search entries containing element (contained within results above)
+      template: '#search-results-template'  // selector for Mustache.js template
+    });
+  });
+</script>
+
+        </div>
+      <footer>
+  <div class="hb-container">
+    <p class="left">© 2015 HuBoard, Inc. All rights reserved.<br> We have no affiliation with Github.com.
+    </p>
+    <a href="https://enterprise.huboard.com" class="hu">
+      <img alt="HuBoard Logo" src="/images/hu.png" height="17px">
+    </a>
+    <ul class="right">
+      <li> Terms </li>
+      <li> Privacy </li>
+      <li> Support </li>
+    </ul>
+  </div>
+</footer>
+
+  </body>
+</html>
